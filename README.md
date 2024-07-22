@@ -55,9 +55,9 @@ function printArticles() {
 }
 ```
 Результат вызова функции:
-![[Pasted image 20240722163318.png]]
+![Вызов функции](https://github.com/IvanDakukin/diginetica_test/blob/main/Pasted%20image%2020240722163318.png)
 В начале строк был добавлен 0, так как артикул имеет именно такой формат:
-![[Pasted image 20240722163407.png]]
+![Артикул](https://github.com/IvanDakukin/diginetica_test/blob/main/Pasted%20image%2020240722163407.png)
 ___
 7. **Написать функцию для получения всех характеристики товара в консоли браузера в виде объекта в формате attributeName: value на странице [https://nir-vanna.ru/product/smesitel-bravat-art-f175109c-dlya-rakoviny/](https://nir-vanna.ru/product/smesitel-bravat-art-f175109c-dlya-rakoviny/)**
 ```js
@@ -85,4 +85,4 @@ function printParameters() {
 printParameters();
 ```
 Результат вызова функции:
-![[Pasted image 20240722171107.png]]
+![Вызов функции](https://github.com/IvanDakukin/diginetica_test/blob/main/Pasted%20image%2020240722171107.png)
