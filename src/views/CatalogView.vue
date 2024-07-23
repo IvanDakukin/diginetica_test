@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <main class="main">
+      <Sidebar></Sidebar>
       <catalog-grid></catalog-grid>
     </main>
   </div>
@@ -9,11 +10,13 @@
 
 <script>
 import Header from "@/components/catalog/HeaderComponent.vue";
+import Sidebar from "@/components/catalog/SidebarComponent.vue";
 import CatalogGrid from "@/components/catalog/CatalogGrid.vue";
 export default {
   name: "CatalogView",
   components: {
     Header,
+    Sidebar,
     CatalogGrid,
   },
 };

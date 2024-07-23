@@ -7,7 +7,11 @@
       </div>
       <div class="header__title">Каталог</div>
     </div>
-    <search-field placeholder="Поиск по 100 000 товаров"></search-field>
+    <search-field
+      placeholder="Поиск по 100 000 товаров"
+      :font-size="16"
+      :submit-btn="true"
+    ></search-field>
     <nav class="nav">
       <router-link to="" class="nav__link">Информация о компании</router-link>
       <router-link to="" class="nav__link">Контакты</router-link>

@@ -8,6 +8,7 @@
       :placeholder="placeholder"
       @focus="inFocus = true"
       @blur="inFocus = false"
+      :style="{ fontSize: fontSize + 'px' }"
     />
     <input
       v-if="text"
@@ -16,7 +17,12 @@
       class="search__reset"
       @click="clearField"
     />
-    <input v-if="text" type="submit" value="Найти" class="search__submit" />
+    <input
+      v-if="text && submitBtn"
+      type="submit"
+      value="Найти"
+      class="search__submit"
+    />
   </form>
 </template>
 
@@ -30,6 +36,8 @@ export default {
   },
   props: {
     placeholder: String,
+    fontSize: Number,
+    submitBtn: Boolean,
   },
   methods: {
     clearField() {
@@ -42,11 +50,12 @@ export default {
 <style lang="scss" scoped>
 .search {
   border: 1px solid $color-border;
-  border-radius: 10px;
-  height: 48px;
+  border-radius: 0.6em;
+  height: 3em;
   flex-grow: 1;
   display: flex;
   align-items: center;
+  transition: border-color 0.2s;
 
   &--focused {
     border-color: $color-border-active;
@@ -60,7 +69,6 @@ export default {
   &__field {
     flex-grow: 1;
     margin-right: 8px;
-    font-size: 16px;
   }
 
   &__submit {
