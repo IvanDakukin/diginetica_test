@@ -42,7 +42,6 @@ export default {
     padding: 15px 24px;
     border: 1px solid $color-border-active;
     border-radius: 8px;
-    font-size: 15px;
     font-weight: 500;
   }
 }
@@ -50,6 +49,9 @@ export default {
   display: flex;
   padding: 15px 24px;
   gap: 11px;
+  &__text {
+    font-size: 16px;
+  }
 }
 .nav {
   display: flex;

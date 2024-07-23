@@ -60,6 +60,7 @@ export default {
   &__field {
     flex-grow: 1;
     margin-right: 8px;
+    font-size: 16px;
   }
 
   &__submit {
