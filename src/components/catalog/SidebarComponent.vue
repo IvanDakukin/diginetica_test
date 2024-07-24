@@ -148,10 +148,16 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
-  min-width: 260px;
+  min-width: 240px;
   max-width: 280px;
   font-family: PTsans, Arial, sans-serif;
   width: 100%;
+  @include _1000 {
+    flex-shrink: 1;
+  }
+  @include _840 {
+    display: none;
+  }
 }
 .category-picker {
   font-size: 15px;
@@ -201,6 +207,8 @@ export default {
 
   &__input {
     position: relative;
+    width: 40%;
+    max-width: 120px;
     &::before {
       position: absolute;
       left: 8px;
@@ -219,7 +227,7 @@ export default {
 
   &__field {
     border: 1px solid $color-border;
-    width: 120px;
+    width: 100%;
     padding: 10px 0 10px 26px;
     font-size: 15px;
     border-radius: 4px;

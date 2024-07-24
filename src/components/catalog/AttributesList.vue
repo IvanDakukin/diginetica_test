@@ -16,11 +16,7 @@
       </div>
     </div>
     <div class="attribute-list__search" v-if="attribute.values.length > 6">
-      <search-field
-        placeholder="Поиск"
-        :fontSize="14"
-        :submitBtn="false"
-      ></search-field>
+      <search-field placeholder="Поиск" :submitBtn="false"></search-field>
     </div>
     <div class="attribute-list__body">
       <div

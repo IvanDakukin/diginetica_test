@@ -1,6 +1,5 @@
 <template>
   <form class="search" :class="{ 'search--focused': inFocus }">
-    <img src="../../assets/icons/search.svg" alt="Поиск" class="search__logo" />
     <input
       v-model="text"
       type="text"
@@ -16,12 +15,7 @@
       class="search__reset"
       @click="clearField"
     />
-    <input
-      v-if="text && submitBtn"
-      type="submit"
-      value="Найти"
-      class="search__submit"
-    />
+    <input type="submit" value="Найти" class="search__submit" />
   </form>
 </template>
 
@@ -35,7 +29,6 @@ export default {
   },
   props: {
     placeholder: String,
-    submitBtn: Boolean,
   },
   methods: {
     clearField() {
@@ -47,42 +40,31 @@ export default {
 
 <style lang="scss" scoped>
 .search {
-  border: 1px solid $color-border;
-  border-radius: 0.6em;
-  height: 3em;
-  flex-grow: 1;
   display: flex;
+  height: 3em;
   align-items: center;
+  border-bottom: 1px solid $color-border;
+  font-size: 16px;
   transition: border-color 0.2s;
+  flex-grow: 1;
 
   &--focused {
-    border-color: $color-border-active;
-  }
-
-  &__logo {
-    margin-left: 20px;
-    margin-right: 12px;
+    border-color: $color-brand;
   }
 
   &__field {
+    margin-right: 16px;
     flex-grow: 1;
-    margin-right: 8px;
-    min-width: 100px;
   }
 
   &__submit {
-    font: bold 14px PTsans;
-    background-color: $color-border-active;
+    font: normal 16px PTsans;
+    background-color: $color-brand;
     color: $color-white;
-    border-radius: 8px;
+    border-radius: 5px;
     height: 38px;
     padding: 0 16px;
-    margin-right: 4px;
-    transition: background-color 0.2s;
     min-width: auto;
-    &:hover {
-      background-color: $color-brand;
-    }
   }
 
   &__reset {

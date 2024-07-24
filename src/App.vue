@@ -11,5 +11,14 @@
   color: $color-font-main;
   font-size: 14px;
   margin-bottom: 36px;
+  @include _1200 {
+    padding: 0 80px;
+  }
+  @include _1000 {
+    padding: 0 50px;
+  }
+  @include _840 {
+    padding: 0 16px;
+  }
 }
 </style>

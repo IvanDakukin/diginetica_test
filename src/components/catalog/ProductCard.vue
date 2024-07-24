@@ -55,10 +55,16 @@ export default {
 
   &:hover &__header {
     background-size: 80px 80px;
+    @include _840 {
+      background-size: auto;
+    }
   }
 
   &:hover &__title {
     color: $color-font-hover;
+    @include _840 {
+      color: inherit;
+    }
   }
 
   &__hit {
